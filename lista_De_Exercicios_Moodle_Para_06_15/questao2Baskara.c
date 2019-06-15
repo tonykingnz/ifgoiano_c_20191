@@ -3,12 +3,17 @@
 #include <math.h>
 
 
-
 float bhaskara(float a, float b, float c);
 
 int main() {
-	
-	bhaskara(2, -16, -18);
+	float valorA, valorB, valorC;
+	printf("Escreva o valor numerico de 'a'\n");
+	scanf("%f", &valorA);
+	printf("Escreva o valor numerico de 'b'\n");
+	scanf("%f", &valorB);
+	printf("Escreva o valor numerico de 'c'\n");
+	scanf("%f", &valorC);
+	bhaskara(valorA, valorB, valorC);
 	
 	return 0;
 }
@@ -20,7 +25,7 @@ float bhaskara(float a, float b, float c){
 	
 	
 	if (a == 0){
-		printf("O coefieciente a nao pode ser 0.");
+		printf("O coefieciente a nao pode ser 0.\n");
 	}
 	
 	
@@ -29,7 +34,7 @@ float bhaskara(float a, float b, float c){
 		delta= (b*b)-4*a*c;
 		
 		if (delta < 0){
-			printf("Equacao imposivel pois o delta eh negativo.");
+			printf("Equacao imposivel pois o delta eh negativo.\n");
 		}
 		
 		else {
@@ -37,7 +42,7 @@ float bhaskara(float a, float b, float c){
 			x1= (-b+sqrt(delta)) / (2*a);
 			x2= (-b-sqrt(delta)) / (2*a);
 			
-			printf("x1= %.4f\n", x1);
+			printf("\nx1= %.4f\n", x1);
 			printf("x2= %.4f\n", x2);			
 		}
 	}
