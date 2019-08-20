@@ -2,7 +2,6 @@
 
 int main(){
 	float polegada;
-	float centimetro;
 	
 	for(polegada = 0; polegada < 10; polegada++){
 		printf("|%i polegada = %.2f  |\n", polegada, polegada*2.54);
