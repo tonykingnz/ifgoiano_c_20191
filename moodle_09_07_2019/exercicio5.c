@@ -1,23 +1,25 @@
 #include <stdio.h>
 
 int main(){
-	int idade, pessoaMaisNova = 0, pessoaMaisVelha = 0;
+	int idade, velho=0, novo=250;
 	
 	do{
-		printf("\nEscreva uma idade:");
+		printf("Escreva uma idade:\n");
 		scanf("%i", &idade);
+	
+		if (idade > velho){
+			velho = idade;
+		}
 		
-		if (idade < pessoaMaisNova){
-			pessoaMaisVelha = idade;
+		else {
+			if (idade < novo && idade > 0){
+				novo = idade;
 			}
-		else if (idade < pessoaMaisVelha){
-			pessoaMaisVelha = idade;
-			}
-		printf("Idade digitada %i\n", idade);
+			
+		}
 	}while(idade > 0);
-
-
-	printf("A pessoa mais velha tem %i anos de idade e a mais nova %i anos de idade", pessoaMaisVelha, pessoaMaisNova);
+	
+	printf("A pessoa mais velha tem %i e a mais nova %i\n", velho, novo);
 	
 	return 0;
 }
